@@ -91,6 +91,8 @@ sudo apt-get update
 sudo apt-get install gcc-aarch64-linux-gnu
 aarch64-linux-gnu-gcc -v
 
+wget https://source.denx.de/Xenomai/xenomai/-/archive/stable/v3.2.x/xenomai-stable-v3.2.x.zip
+
 ./scripts/bootstrap
 
 ./configure CFLAGS="-mtune=cortex-a53" LDFLAGS="-mtune=cortex-a53" --build=i686-pc-linux-gnu --host=aarch64-linux-gnu --with-core=mercury --enable-smp --enable-pshared CC=aarch64-linux-gnu-gcc LD=aarch64-linux-gnu-ld
